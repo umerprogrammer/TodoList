@@ -3,13 +3,16 @@ var txtTodo = document.getElementById("txttodo");
 
 var data = [];
 
-data = JSON.parse( localStorage.getItem("myTodo"));
 
 
 function addTodo() {
-    
+    if(txtTodo.value == "") {
+        alert("Please enter todo");
+        return;
+    }
+    var id =  data == null ? 1 : data.length +1;
     todoObj = {
-        "id": data.length +1,
+        "id": id,
         "description": txtTodo.value.toString(),
         "todoStatus": "pending"
     }
@@ -23,10 +26,13 @@ function addTodo() {
 }
 
 function addList() {
+
+
     var tbody = document.getElementById("tableBody");
     while (tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
+data = JSON.parse( localStorage.getItem("myTodo"));
 
 
     data.forEach(element => {
