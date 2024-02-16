@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+
+            <div class="div1">
+                <header><h2>My Todo List</h2></header>
+                <div class="todoForm">
+                    <input type="text" placeholder="My Todo" name="txttodo" id="txttodo" class="txttodo">
+                    <input type="button" value="Add Todo" class="btntodo" id="btntodo" onclick="addTodo()">
+                </div>
+            </div>
+          
+            <div class="div2">
+                <div class="todoFormList">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="10%">
+                                    Id
+                                </th>
+                                <th width="60%">
+                                    Description
+                                </th>
+                                <th width="20%">
+                                    Status
+                                </th>
+                                <th width="20%">
+                                    Close
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    My Todo
+                                </td>
+                                <td>
+                                    <input type="button" value="Pending" class="btnstatus" id="btnstatus" >
+                                </td>
+                                <td>
+                                    <input type="button" value="Close" class="btnclose" id="btnclose">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
