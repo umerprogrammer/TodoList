@@ -1,5 +1,6 @@
 var btnAdd = document.getElementById("btntodo");
 var txtTodo = document.getElementById("txttodo");
+var tbody = document.getElementById("tableBody");
 
 let data = new Array();
 
@@ -31,7 +32,6 @@ function addList() {
         data = storageData;
     }
 
-    var tbody = document.getElementById("tableBody");
     while (tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
@@ -78,7 +78,6 @@ function addList() {
 }
 
 function deleteTodo(ele) {
-    var tbody = document.getElementById("tableBody");
     var element = ele.parentElement;
 
     var trIndex = data.findIndex(elm => elm.id == element.parentElement.id);
@@ -91,7 +90,6 @@ function deleteTodo(ele) {
 }
 
 function markStatus(ele) {
-    var tbody = document.getElementById("tableBody");
     var element = ele.parentElement;
 
     var trIndex = data.findIndex(elm => elm.id == element.parentElement.id);
@@ -99,6 +97,17 @@ function markStatus(ele) {
     console.log(data);
     localStorage.removeItem("myTodo");
     localStorage.setItem("myTodo", JSON.stringify(data));
+    addList();
+}
+
+function deleteAll(){
+    data = [];
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+    }
+ 
+    localStorage.removeItem("myTodo");
+
     addList();
 }
 

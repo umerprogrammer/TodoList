@@ -107,15 +107,16 @@
     cursor: pointer;
     border: 0;
     outline: 0;
-    border: 1px solid #f72828;
-    background-color: #ee4949;
+    border: 1px solid rgb(111, 97, 241);
+    background-color: rgb(111, 97, 241);
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
     box-shadow: 0 3px #666;
 }
 .btntodo:hover{
-    background-color:  #f72828;
+    border: 1px solid rgb(111, 97, 241);
+    background-color: rgb(111, 97, 241);
 }
 
 .btntodo:active {
@@ -146,3 +147,34 @@
     padding: 3px 15px;
     border-radius: 5px;
 }
+
+.btndelAll{
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    border: 1px solid rgb(247, 187, 23);
+    background-color: rgb(247, 187, 23);
+    color:  #f10909;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0 3px #666;
+}
+
+.btndelAll:hover{
+    border: 1px solid #ee6060;
+    background-color: #ee6060;
+    color: white;
+}
+
+
+.btndelAll:active {
+    background-color: #f10909;
+    box-shadow: 0px 2px #666;
+    transform: translateY(1px);
+  }
+  
+  .button-panel{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+  }

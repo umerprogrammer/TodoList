@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Todo List</title>
 </head>
+
 <body>
     <div class="main-container">
         <div class="container">
 
             <div class="div1">
-                <header><h2>My Todo List</h2></header>
+                <header>
+                    <h2>My Todo List</h2>
+                </header>
                 <div class="todoForm">
                     <input type="text" placeholder="My Todo" name="txttodo" id="txttodo" class="txttodo">
-                    <input type="button" value="Add Todo" class="btntodo" id="btntodo" onclick="addTodo()">
+                    <div class="button-panel">
+                        <input type="button" value="Add Todo" class="btntodo" id="btntodo" onclick="addTodo()">
+                        <input type="button" value="Delete All" class="btndelAll" id="btndelAll" onclick="deleteAll()">
+                    </div>
                 </div>
             </div>
-          
+
             <div class="div2">
                 <div class="todoFormList">
                     <table>
@@ -46,7 +53,7 @@
                                     My Todo
                                 </td>
                                 <td>
-                                    <input type="button" value="Pending" class="btnstatus" id="btnstatus" >
+                                    <input type="button" value="Pending" class="btnstatus" id="btnstatus">
                                 </td>
                                 <td>
                                     <input type="button" value="Close" class="btnclose" id="btnclose">
@@ -57,10 +64,11 @@
 
                 </div>
             </div>
-            
+
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
